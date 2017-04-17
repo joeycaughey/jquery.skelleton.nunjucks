@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.0/nunjucks.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var scorecard = {
+            title: "This is a test",
+            items: [{
+                name: "Value"
+            }]
+        };
+    })
+    </script>
+</head>
+
+<body>
+    <div data-content-parse="scorecard">
+        <h1>{{ title }}</h1>
+        <ul>
+            {% for item in items %}
+            <li>{{ item.name }} {{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
